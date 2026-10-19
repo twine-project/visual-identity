@@ -2,22 +2,64 @@
 
 Brand guidelines, logo files and presentation template for **TWINE** (*Twin-based Web Interoperable Network for Engagement*).
 
-![TWINE main horizontal logo](Logo%20Twine%20PNG/Twine%20horizontal/Main%20horizontal%20logo%20TWINE.png)
+**[Preview and download the logos →](https://twine-project.github.io/visual-identity/)** · **[Download everything (.zip) →](https://github.com/twine-project/visual-identity/releases/latest)**
 
-## Contents
+![TWINE main horizontal logo](logos/png/horizontal/twine-horizontal-main.png)
 
-| Path | Format | Use |
-| --- | --- | --- |
-| `Twine Final Brand Guideline 2026.pdf` | PDF | **Brand guidelines** – the reference for every rule summarised below |
-| `Templates/TWINE_Presentation_Template-v0.4.potx` | PowerPoint template | Starting point for all TWINE presentations |
-| `Final logos TWINE_rgb.pdf` | PDF | Overview sheet of all logo versions |
-| `Logo Twine SVG/` | SVG (vector) | Websites, digital products, scalable artwork |
-| `Logo Twine PNG/` | PNG (high-resolution raster, transparent background) | Documents, presentations, social media |
-| `Logo Twine EPS CMYK/` | EPS (vector) | Print and professional design software |
+## About TWINE
+
+TWINE is a Horizon Europe research and innovation action on Web 4.0 and Virtual Worlds. It demonstrates how open, federated and human-centric infrastructures can make digital twins and immersive civic services interoperable, accessible and trusted for citizens, cities and SMEs, with pilots in Rotterdam, Tampere and Flanders.
+
+| | |
+| --- | --- |
+| Grant agreement | 101298722 |
+| Call / topic | HORIZON-CL4-2025-03 / HORIZON-CL4-2025-03-HUMAN-16 |
+| Type of action | Research and Innovation Action (RIA) |
+| Duration | 36 months |
+| Coordinator | imec (Interuniversitair Micro-Electronica Centrum), Belgium |
+| Website | [twine-project.eu](https://twine-project.eu/) |
+| LinkedIn | [twine-eu](https://www.linkedin.com/company/twine-eu/) |
+| YouTube | [@twine-project-eu](https://www.youtube.com/@twine-project-eu) |
+| Zenodo | [twine-project-eu community](https://zenodo.org/communities/twine-project-eu/) |
+| Contact | [info@twine-project.eu](mailto:info@twine-project.eu) |
+
+### Consortium
+
+| Partner | Country |
+| --- | --- |
+| imec – Interuniversitair Micro-Electronica Centrum (coordinator) | BE |
+| OASC – Open & Agile Smart Cities | BE |
+| Engineering – Ingegneria Informatica SpA | IT |
+| The Lisbon Council for Economic Competitiveness | BE |
+| Gemeente Rotterdam | NL |
+| Tampereen Kaupunki (City of Tampere) | FI |
+| Suomen Itämeri-Instituutin Säätiö (affiliated entity of the City of Tampere) | FI |
+| Vlaamse Gewest (Flemish Region) | BE |
+| Future Insight Group BV | NL |
+| Business Tampere Oy | FI |
+
+## Repository structure
+
+```
+├── guidelines/
+│   ├── twine-brand-guidelines-2026.pdf   Brand guidelines – the reference for every rule below
+│   └── twine-logo-sheet.pdf              Overview sheet of all logo versions
+├── logos/
+│   ├── svg/{horizontal,vertical,logomark}/   Vector – web and digital use
+│   ├── png/{horizontal,vertical,logomark}/   High-resolution raster, transparent background
+│   └── eps/twine-logo-sheet-cmyk.eps         Vector, CMYK – print
+├── templates/
+│   └── twine-presentation-template-v0.4.potx PowerPoint template
+├── index.html                            Preview page (GitHub Pages)
+├── CHANGELOG.md
+└── LICENSE
+```
+
+Logo files follow the pattern `twine-<layout>-<variant>.<ext>`, for example `logos/svg/vertical/twine-vertical-white-lines.svg`.
 
 ## Brand guidelines
 
-The [brand guidelines](Twine%20Final%20Brand%20Guideline%202026.pdf) (13 pages, 2026) were designed by Manuela Fiori (visual strategy, design & multimedia production). They cover:
+The [brand guidelines](guidelines/twine-brand-guidelines-2026.pdf) (13 pages, 2026) were designed by Manuela Fiori (visual strategy, design & multimedia production). They cover:
 
 1. **Concept** – *Human-Centricity Intersection*, rooted in "Community and Immersive Services". Minimal geometric shapes intersect and overlap to symbolise the touchpoints between Web 4.0 and the federation members.
 2. **Mood board** – keywords: *intertwine, connect, trust, infrastructures, interoperable, collaborate, intersect, stripe*.
@@ -63,24 +105,22 @@ The logo is made up of three elements:
 
 ### Layouts
 
-Both the SVG and PNG folders are organised by layout:
-
-- **Horizontal** – logomark to the left of the wordmark and tagline. The preferred version for most uses.
-- **Vertical** – logomark above the wordmark and tagline. Use where horizontal space is limited.
+- **Horizontal** – logomark to the left of the logotype and tagline. The preferred version for most uses.
+- **Vertical** – logomark above the logotype and tagline. Use where horizontal space is limited.
 - **Logomark** – the symbol on its own. Use for avatars, favicons and small spaces.
 
 ### Colour variants
 
-| Variant | Description | Background |
-| --- | --- | --- |
-| **Main** | Full-colour logomark with gradients, Slate Blue wordmark, grey tagline | Light |
-| **Main – white tagline** | Full-colour logo with a white tagline | Dark |
-| **Black gradient** (monochrome positive) | Greyscale/black version with gradients | Light |
-| **White gradient** (negative) | Inverted version with white typography | Dark |
-| **Black lines** | Flat black line version, no gradients | Light, single-colour printing |
-| **White lines** | Flat white line version, no gradients | Dark, single-colour printing |
+| Variant | Description | Background | Horizontal | Vertical | Logomark |
+| --- | --- | --- | :---: | :---: | :---: |
+| `main` | Full-colour logomark with gradients, Slate Blue logotype, grey tagline | Light | SVG · PNG | SVG · PNG | SVG · PNG |
+| `main-white-tagline` | Full-colour logo with a white tagline | Mid-tone or coloured (the logotype stays Slate Blue) | SVG · PNG | SVG · PNG | – |
+| `black-gradient` | Monochrome positive, greyscale with gradients | Light | SVG · PNG | SVG · PNG | SVG · PNG |
+| `white-gradient` | Negative, white typography | Dark | SVG · PNG | SVG · PNG | – |
+| `black-lines` | Flat black line version, no gradients | Light, single-colour printing | SVG · PNG | PNG | SVG · PNG |
+| `white-lines` | Flat white line version, no gradients | Dark, single-colour printing | SVG · PNG | SVG · PNG | SVG · PNG |
 
-The guidelines also show a flat-colour logomark without gradients.
+The EPS file contains all versions on a single CMYK artboard for print.
 
 ### Clear space
 
@@ -95,7 +135,7 @@ The minimum clear space around the lockup is based on a reference unit taken fro
 
 ## Presentation template
 
-`Templates/TWINE_Presentation_Template-v0.4.potx` is a 16:9 PowerPoint template using the brand fonts (Raleway SemiBold for headings, Albert Sans for body text). It includes these slide layouts:
+[`templates/twine-presentation-template-v0.4.potx`](templates/twine-presentation-template-v0.4.potx) is a 16:9 PowerPoint template using the brand fonts (Raleway SemiBold for headings, Albert Sans for body text). It includes these slide layouts:
 
 - Cover – Blue
 - Cover – Red Orange
@@ -113,8 +153,16 @@ The minimum clear space around the lockup is based on a reference unit taken fro
 
 Open the `.potx` file to create a new presentation from it. Install Raleway and Albert Sans first so the slides display correctly.
 
-## Notes
+## Releases
 
-- Some file names do not match their folder or layout (e.g. `Logo Twine PNG/Twine_vertical/Final logos TWINE_rgb_Main horizontal logo Twine-02.png` is actually the main vertical logo). Check the preview before use.
-- The EPS file sits in the `CMYK` folder but its file name carries the `_rgb` suffix.
-- A few SVG files are duplicated with a `(1)` suffix.
+Each [release](https://github.com/twine-project/visual-identity/releases) includes a `.zip` with all the files in this repository. Changes are listed in the [changelog](CHANGELOG.md).
+
+## Licence
+
+Copyright © 2026 TWINE Consortium. All rights reserved.
+
+The TWINE name and logo are not released under an open-source or Creative Commons licence. They may be used, unmodified, only to refer to the TWINE project and in line with the brand guidelines. See [LICENSE](LICENSE) for details.
+
+## Funding
+
+Funded by the European Union under grant agreement No 101298722. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the granting authority. Neither the European Union nor the granting authority can be held responsible for them.

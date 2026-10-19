@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TWINE Visual Identity</title>
+<meta name="description" content="Logos, colour palette, typography and brand guidelines of TWINE – Twin-based Web Interoperable Network for Engagement.">
+<link rel="icon" type="image/svg+xml" href="logos/svg/logomark/twine-logomark-main.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600&family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --slate-blue: #285271;
+    --steel-blue: #487A9F;
+    --air-blue: #75A0C0;
+    --melon-orange: #F47D69;
+    --red-orange: #DF2E10;
+    --guide-ink: #2C2C31;
+    --sonic-silver: #71757A;
+    --line: #E3E5E8;
+    --surface: #F5F6F7;
+    --bg: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--guide-ink);
+    font: 400 17px/1.6 "Albert Sans", system-ui, sans-serif;
+  }
+  h1, h2, h3 { font-family: Raleway, system-ui, sans-serif; font-weight: 700; line-height: 1.2; }
+  a { color: var(--slate-blue); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+  header { border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 16px; }
+  header img { height: 40px; display: block; }
+  nav { display: flex; gap: 20px; flex-wrap: wrap; font-weight: 600; }
+  nav a { text-decoration: none; color: var(--guide-ink); }
+  nav a:hover { color: var(--slate-blue); }
+
+  .hero { padding-block: 64px 48px; }
+  .hero h1 { font-size: clamp(32px, 5vw, 52px); margin: 0 0 12px; color: var(--slate-blue); }
+  .hero p { max-width: 680px; margin: 0 0 28px; font-size: 19px; color: var(--sonic-silver); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 12px 20px; border-radius: 6px;
+    font-weight: 600; text-decoration: none; border: 2px solid var(--slate-blue);
+  }
+  .btn.primary { background: var(--slate-blue); color: #fff; }
+  .btn.secondary { color: var(--slate-blue); }
+  .btn:hover { opacity: .88; }
+
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  section > .wrap > h2 { font-size: 30px; margin: 0 0 8px; }
+  .lead { margin: 0 0 28px; color: var(--sonic-silver); max-width: 720px; }
+
+  .tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+  .tabs button {
+    font: 600 15px "Albert Sans", sans-serif; padding: 8px 16px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--bg); color: var(--guide-ink); cursor: pointer;
+  }
+  .tabs button[aria-selected="true"] { background: var(--slate-blue); border-color: var(--slate-blue); color: #fff; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 20px; }
+  .card { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+  .preview { aspect-ratio: 16 / 10; display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; padding: 28px; }
+  .preview.mid { background: var(--air-blue); }
+  .preview.light { background: var(--bg); background-image: linear-gradient(45deg, var(--surface) 25%, transparent 25%, transparent 75%, var(--surface) 75%), linear-gradient(45deg, var(--surface) 25%, transparent 25%, transparent 75%, var(--surface) 75%); background-size: 20px 20px; background-position: 0 0, 10px 10px; }
+  .preview.dark { background: var(--slate-blue); }
+  .preview img { max-width: 100%; max-height: 100%; }
+  .meta { padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); }
+  .meta strong { display: block; font-size: 15px; }
+  .meta small { color: var(--sonic-silver); }
+  .dl { display: flex; gap: 6px; }
+  .dl a { font-size: 13px; font-weight: 600; text-decoration: none; padding: 4px 9px; border: 1px solid var(--line); border-radius: 4px; }
+  .dl a:hover { border-color: var(--slate-blue); }
+
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+  .swatch { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; cursor: pointer; text-align: left; padding: 0; background: var(--bg); font: inherit; color: inherit; }
+  .swatch .chip { height: 88px; }
+  .swatch .info { padding: 10px 12px; font-size: 14px; }
+  .swatch .info strong { display: block; font-size: 15px; }
+  .swatch .info span { color: var(--sonic-silver); font-variant-numeric: tabular-nums; }
+  .group-title { font-size: 16px; text-transform: uppercase; letter-spacing: .06em; color: var(--sonic-silver); margin: 28px 0 12px; }
+
+  .type { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .type .card { padding: 24px; }
+  .type .sample { font-size: 30px; margin: 4px 0 12px; color: var(--slate-blue); }
+  .type .raleway { font-family: Raleway, sans-serif; font-weight: 700; }
+  .type p { margin: 0; color: var(--sonic-silver); }
+
+  .downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .downloads a { display: block; padding: 22px; border: 1px solid var(--line); border-radius: 10px; text-decoration: none; color: var(--guide-ink); }
+  .downloads a:hover { border-color: var(--slate-blue); }
+  .downloads strong { display: block; font-family: Raleway, sans-serif; font-size: 18px; color: var(--slate-blue); margin-bottom: 4px; }
+  .downloads span { color: var(--sonic-silver); font-size: 15px; }
+
+  footer { background: var(--guide-ink); color: #D5D7DA; padding: 40px 0; font-size: 14px; }
+  footer a { color: #fff; }
+  footer p { margin: 0 0 10px; max-width: 820px; }
+
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--guide-ink); color: #fff; padding: 8px 16px; border-radius: 6px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .toast.show { opacity: 1; }
+
+  @media (max-width: 640px) {
+    header .wrap { flex-direction: column; align-items: flex-start; }
+    .hero { padding-block: 40px 32px; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="logos/svg/horizontal/twine-horizontal-main.svg" alt="TWINE – Twin-based Web Interoperable Network for Engagement">
+    <nav>
+      <a href="#logos">Logos</a>
+      <a href="#colours">Colours</a>
+      <a href="#typography">Typography</a>
+      <a href="#downloads">Downloads</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1>TWINE Visual Identity</h1>
+    <p>Logos, colours, typography and templates of TWINE – Twin-based Web Interoperable Network for Engagement, a Horizon Europe project on Web 4.0 and Virtual Worlds.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/twine-project/visual-identity/releases/latest">Download all (.zip)</a>
+      <a class="btn secondary" href="guidelines/twine-brand-guidelines-2026.pdf">Brand guidelines (PDF)</a>
+    </div>
+  </div>
+
+  <section id="logos">
+    <div class="wrap">
+      <h2>Logos</h2>
+      <p class="lead">Use SVG for digital, EPS for print and PNG only where vector files are not supported. Use the white versions on dark or photographic backgrounds. Do not stretch, recolour or rotate the logo.</p>
+      <div class="tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-layout="horizontal">Horizontal</button>
+        <button role="tab" aria-selected="false" data-layout="vertical">Vertical</button>
+        <button role="tab" aria-selected="false" data-layout="logomark">Logomark</button>
+      </div>
+      <div class="grid" id="logo-grid"></div>
+    </div>
+  </section>
+
+  <section id="colours">
+    <div class="wrap">
+      <h2>Colours</h2>
+      <p class="lead">Click a colour to copy its HEX code. Full RGB, HSB and CMYK values are in the brand guidelines.</p>
+      <h3 class="group-title">Main</h3>
+      <div class="swatches" id="swatches-main"></div>
+      <h3 class="group-title">Secondary</h3>
+      <div class="swatches" id="swatches-secondary"></div>
+      <h3 class="group-title">Neutral</h3>
+      <div class="swatches" id="swatches-neutral"></div>
+    </div>
+  </section>
+
+  <section id="typography">
+    <div class="wrap">
+      <h2>Typography</h2>
+      <p class="lead">Both fonts are free on Google Fonts.</p>
+      <div class="type">
+        <div class="card">
+          <small>Titles, headers, subheaders</small>
+          <div class="sample raleway">Raleway Bold</div>
+          <p><a href="https://fonts.google.com/specimen/Raleway">Get Raleway</a></p>
+        </div>
+        <div class="card">
+          <small>Paragraphs, quotations</small>
+          <div class="sample">Albert Sans Regular</div>
+          <p><a href="https://fonts.google.com/specimen/Albert+Sans">Get Albert Sans</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="downloads">
+    <div class="wrap">
+      <h2>Downloads</h2>
+      <p class="lead">Changes are listed in the <a href="https://github.com/twine-project/visual-identity/blob/main/CHANGELOG.md">changelog</a>.</p>
+      <div class="downloads">
+        <a href="https://github.com/twine-project/visual-identity/releases/latest"><strong>Complete package</strong><span>All logos, guidelines and template (.zip)</span></a>
+        <a href="guidelines/twine-brand-guidelines-2026.pdf"><strong>Brand guidelines</strong><span>PDF, 13 pages</span></a>
+        <a href="templates/twine-presentation-template-v0.4.potx"><strong>Presentation template</strong><span>PowerPoint, 16:9, v0.4</span></a>
+        <a href="logos/eps/twine-logo-sheet-cmyk.eps"><strong>Logos for print</strong><span>EPS, CMYK, all versions</span></a>
+        <a href="guidelines/twine-logo-sheet.pdf"><strong>Logo sheet</strong><span>PDF, all versions</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Funded by the European Union under grant agreement No 101298722. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the granting authority. Neither the European Union nor the granting authority can be held responsible for them.</p>
+    <p>© 2026 TWINE Consortium. All rights reserved. The TWINE name and logo may be used, unmodified, only to refer to the project – see the <a href="https://github.com/twine-project/visual-identity/blob/main/LICENSE">licence</a>.</p>
+    <p><a href="https://twine-project.eu/">twine-project.eu</a> · <a href="https://www.linkedin.com/company/twine-eu/">LinkedIn</a> · <a href="https://www.youtube.com/@twine-project-eu">YouTube</a> · <a href="https://zenodo.org/communities/twine-project-eu/">Zenodo</a> · <a href="https://github.com/twine-project/visual-identity">GitHub</a></p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+  // Variants available for each layout, with the background used for their preview
+  const VARIANTS = {
+    'main':               { label: 'Main', note: 'Full colour', bg: 'light' },
+    'main-white-tagline': { label: 'Main – white tagline', note: 'Full colour, mid-tone backgrounds', bg: 'mid' },
+    'black-gradient':     { label: 'Black gradient', note: 'Monochrome positive', bg: 'light' },
+    'white-gradient':     { label: 'White gradient', note: 'Negative, dark backgrounds', bg: 'dark' },
+    'black-lines':        { label: 'Black lines', note: 'Flat, single colour', bg: 'light' },
+    'white-lines':        { label: 'White lines', note: 'Flat, single colour, dark backgrounds', bg: 'dark' },
+  };
+  const LOGOS = {
+    horizontal: { 'main': 'svg png', 'main-white-tagline': 'svg png', 'black-gradient': 'svg png', 'white-gradient': 'svg png', 'black-lines': 'svg png', 'white-lines': 'svg png' },
+    vertical:   { 'main': 'svg png', 'main-white-tagline': 'svg png', 'black-gradient': 'svg png', 'white-gradient': 'svg png', 'black-lines': 'png', 'white-lines': 'svg png' },
+    logomark:   { 'main': 'svg png', 'black-gradient': 'svg png', 'black-lines': 'svg png', 'white-lines': 'svg png' },
+  };
+  const COLOURS = {
+    main:      [['Slate Blue', '#285271'], ['Red Orange', '#DF2E10'], ['Melon Orange', '#F47D69'], ['Industrial Silver', '#AAADB0']],
+    secondary: [['Steel Blue', '#487A9F'], ['Air Blue', '#75A0C0'], ['Light Steel Blue', '#AAC5D8'], ['Pastel Peach', '#F8B0A3']],
+    neutral:   [['Sonic Silver', '#71757A'], ['Guide Ink', '#2C2C31'], ['Black', '#000000'], ['White', '#FFFFFF']],
+  };
+
+  const path = (layout, variant, ext) => `logos/${ext}/${layout}/twine-${layout}-${variant}.${ext}`;
+
+  function renderLogos(layout) {
+    const grid = document.getElementById('logo-grid');
+    grid.innerHTML = '';
+    for (const [variant, formats] of Object.entries(LOGOS[layout])) {
+      const v = VARIANTS[variant];
+      const exts = formats.split(' ');
+      // Preview from SVG when available, it is much lighter than the PNG
+      const src = path(layout, variant, exts.includes('svg') ? 'svg' : 'png');
+      const links = exts.map(e => `<a href="${path(layout, variant, e)}" download>${e.toUpperCase()}</a>`).join('');
+      grid.insertAdjacentHTML('beforeend', `
+        <div class="card">
+          <div class="preview ${v.bg}"><img src="${src}" alt="TWINE ${layout} logo, ${v.label}" loading="lazy"></div>
+          <div class="meta"><div><strong>${v.label}</strong><small>${v.note}</small></div><div class="dl">${links}</div></div>
+        </div>`);
+    }
+  }
+
+  document.querySelectorAll('.tabs button').forEach(btn => btn.addEventListener('click', () => {
+    document.querySelectorAll('.tabs button').forEach(b => b.setAttribute('aria-selected', b === btn));
+    renderLogos(btn.dataset.layout);
+  }));
+  renderLogos('horizontal');
+
+  const toast = document.getElementById('toast');
+  function showToast(text) {
+    toast.textContent = text;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 1400);
+  }
+
+  for (const [group, list] of Object.entries(COLOURS)) {
+    const box = document.getElementById(`swatches-${group}`);
+    for (const [name, hex] of list) {
+      const el = document.createElement('button');
+      el.className = 'swatch';
+      el.innerHTML = `<div class="chip" style="background:${hex}"></div><div class="info"><strong>${name}</strong><span>${hex}</span></div>`;
+      el.addEventListener('click', async () => {
+        try { await navigator.clipboard.writeText(hex); showToast(`${hex} copied`); }
+        catch { showToast(hex); }
+      });
+      box.appendChild(el);
+    }
+  }
+</script>
+</body>
+</html>
